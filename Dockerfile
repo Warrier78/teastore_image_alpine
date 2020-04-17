@@ -9,7 +9,7 @@ RUN mvn clean install -DskipTests
 
 
 
-FROM teastore_alpine_base:latest
+FROM w3333/teastore_alpine_base:latest
 LABEL maintainer="Dhanya Warrier"
 COPY --from=mavenbuild /root/foldername/TeaStore/utilities/tools.descartes.teastore.docker.all/target/tools.descartes.teastore.image.war /usr/local/tomcat/webapps/tools.descartes.teastore.image.war
 # ENV REGISTRY_HOST 172.17.0.1
